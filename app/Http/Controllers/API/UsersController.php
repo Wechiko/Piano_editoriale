@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserStoreRequest;
 use App\Http\Resources\UserIndexResource;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        return UserIndexResource::collection($users);
+        // return response()->json($users);
+         return UserIndexResource::collection($users);
 
     }
 
@@ -27,7 +29,7 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
         //
     }

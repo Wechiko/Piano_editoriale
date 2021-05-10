@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="215758cc-9234-4543-a096-7523b5c3c796" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,22 +157,42 @@
       <option name="presentableId" value="Default" />
       <updated>1620382744043</updated>
       <workItem from="1620382746689" duration="1113000" />
-      <workItem from="1620658211082" duration="3596000" />
+      <workItem from="1620658211082" duration="4958000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix:fix users api">
+      <created>1620661982025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620661982025</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix:fix users api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:fix users api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="172" width="1092" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620383843554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="455" y="172" width="1092" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620383843554" />
+    <state x="1019" y="116" key="CommitChangelistDialog2" timestamp="1620661979568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1019" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1620661979568" />
     <state x="486" y="113" width="1031" height="809" key="DiffContextDialog" timestamp="1620660774730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="486" y="113" width="1031" height="809" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620660774730" />
+    <state x="985" y="281" key="Vcs.Push.Dialog.v2" timestamp="1620661984969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="985" y="281" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620661984969" />
     <state x="664" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1620659098444">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
