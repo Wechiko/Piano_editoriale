@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\API\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/users', [UsersController::class])->name('users.index');
+
 
 Route::get('/', function () {
     return view('welcome');
