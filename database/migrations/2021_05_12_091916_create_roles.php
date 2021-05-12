@@ -32,25 +32,41 @@ class CreateRoles extends Migration
         Schema::create('sectors', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('name');
+            $table->string('description')->nullable();
             $table->string('key')->unique();
         });
 
 
         Schema::create('editorial_project', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->date('publication_date')->nullable();
             $table->unsignedTinyInteger('sector_id');
             $table->unsignedBigInteger('author_id');
+            $table->boolean('is_approved_by_ceo')->default(false);
+            $table->boolean('is_approved_by_editorial_director')->default(false);
+            $table->boolean('is_approved_by_editorial_responsible')->default(false);
+            $table->boolean('is_approved_by_sales_director')->default(false);
+            $table->string('title');
+            $table->date('publication_date')->nullable();
             $table->unsignedInteger('pages')->nullable();
             $table->unsignedFloat('price')->nullable();
             $table->unsignedFloat('cost')->nullable();
+            $table->foreign('author_id')->references('id')->on('users');
+            $table->foreign('sector_id')->references('id')->on('sectors');
             $table->timestamps();
-            $table->foreign('author_id')->references('id')->on('');
+            $table->softDeletes();
 
 
 
         });
+        Schema::create('editorial_project_logs', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('editorial_project_id');
+            $table->unsignedBigInteger('user_id');
+            $table->enum('action',['CREATE','UPDATE','DESTROY']);
+            $table->dateTimeTz('created_at')->default(\Carbon\Carbon::now());
+            $table->foreign('editorial_project_id')->references('author_id')->on('editorial_project')->onDelete('cascade');
+        });
+
 
 
 
@@ -63,6 +79,9 @@ class CreateRoles extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('editorial_project_logs');
+        Schema::dropIfExists('editorial_project');
+        Schema::dropIfExists('sectors');
         Schema::dropIfExists('user_role');
         Schema::dropIfExists('roles');
     }

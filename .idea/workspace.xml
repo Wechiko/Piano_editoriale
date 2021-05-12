@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="215758cc-9234-4543-a096-7523b5c3c796" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_12_091916_create_roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_12_091916_create_roles.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +157,7 @@
       <workItem from="1620382746689" duration="1113000" />
       <workItem from="1620658211082" duration="5038000" />
       <workItem from="1620735553872" duration="24000" />
-      <workItem from="1620807619389" duration="5922000" />
+      <workItem from="1620807619389" duration="7353000" />
     </task>
     <task id="LOCAL-00001" summary="Fix:fix users api">
       <created>1620661982025</created>
@@ -179,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620811428613</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add:add table (N-&gt;N)/(user-&gt;role)x2">
+      <created>1620814377080</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620814377080</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +197,8 @@
     <MESSAGE value="Fix:fix users api" />
     <MESSAGE value="Fix:fix users api x2" />
     <MESSAGE value="add:add table (N-&gt;N)/(user-&gt;role)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add:add table (N-&gt;N)/(user-&gt;role)" />
+    <MESSAGE value="add:add table (N-&gt;N)/(user-&gt;role)x2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add:add table (N-&gt;N)/(user-&gt;role)x2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="172" width="1092" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620383843554">
@@ -200,10 +209,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="748" y="259" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620810355474" />
-    <state x="736" y="108" key="CommitChangelistDialog2" timestamp="1620811426135">
+    <state x="736" y="108" key="CommitChangelistDialog2" timestamp="1620814374728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="736" y="108" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1620811426135" />
+    <state x="736" y="108" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1620814374728" />
     <state x="486" y="113" width="1031" height="809" key="DiffContextDialog" timestamp="1620660774730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -216,10 +225,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="523" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620811514503" />
-    <state x="985" y="281" key="Vcs.Push.Dialog.v2" timestamp="1620811429896">
+    <state x="985" y="281" key="Vcs.Push.Dialog.v2" timestamp="1620814378057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="985" y="281" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620811429896" />
+    <state x="985" y="281" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620814378057" />
     <state x="664" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1620659098444">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
