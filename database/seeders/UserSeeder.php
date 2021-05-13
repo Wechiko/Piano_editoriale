@@ -24,6 +24,16 @@ class UserSeeder extends Seeder
 
         $role = Role::where('key',Role::ROLE_EDITORIAL_DESIGN_MANAGER)->first();
         $user->roles()->attach($role);
+        $role = Role::where('key',Role::ROLE_CEO)->first();
+        $user->roles()->attach($role);
+        $role = Role::where('key',Role::ROLE_EDITORIAL_DIRECTOR)->first();
+        $user->roles()->attach($role);
+        $role = Role::where('key',Role::ROLE_EDITORIAL_RESPONSIBLE)->first();
+        $user->roles()->attach($role);
+        $role = Role::where('key',Role::ROLE_SALES_DIRECTOR)->first();
+        $user->roles()->attach($role);
+        $role = Role::where('key',Role::ROLE_ADMIN)->first();
+        $user->roles()->attach($role);
 
 
 
