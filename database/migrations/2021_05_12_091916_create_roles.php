@@ -66,7 +66,6 @@ class CreateRoles extends Migration
             $table->dateTimeTz('created_at')->default(\Carbon\Carbon::now());
             $table->foreign('editorial_project_id')->references('author_id')->on('editorial_project')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
 
         });
 

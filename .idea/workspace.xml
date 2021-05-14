@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="215758cc-9234-4543-a096-7523b5c3c796" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/piano-editoriale-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/piano-editoriale-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserIndexResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserIndexResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_12_091916_create_roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_12_091916_create_roles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +134,7 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="ProjectId" id="1sChzraWz2zN4duvvHRr3sCd8dr" />
@@ -142,6 +150,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\progetti\piano-editoriale-api\app\Http\Controllers\API" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -162,7 +175,9 @@
       <workItem from="1620735553872" duration="24000" />
       <workItem from="1620807619389" duration="7461000" />
       <workItem from="1620815801501" duration="13000" />
-      <workItem from="1620922692086" duration="1066000" />
+      <workItem from="1620922692086" duration="1132000" />
+      <workItem from="1620936019193" duration="14000" />
+      <workItem from="1620977760220" duration="7074000" />
     </task>
     <task id="LOCAL-00001" summary="Fix:fix users api">
       <created>1620661982025</created>
@@ -199,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620815697724</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add: role update (x6)">
+      <created>1620923807400</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620923807400</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +233,8 @@
     <MESSAGE value="add:add table (N-&gt;N)/(user-&gt;role)" />
     <MESSAGE value="add:add table (N-&gt;N)/(user-&gt;role)x2" />
     <MESSAGE value="add: tutte le table" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: tutte le table" />
+    <MESSAGE value="add: role update (x6)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: role update (x6)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="172" width="1092" height="729" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620383843554">
@@ -222,26 +245,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="748" y="259" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620810355474" />
-    <state x="736" y="108" key="CommitChangelistDialog2" timestamp="1620815695470">
+    <state x="736" y="108" key="CommitChangelistDialog2" timestamp="1620923804261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="736" y="108" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1620815695470" />
+    <state x="736" y="108" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1620923804261" />
     <state x="486" y="113" width="1031" height="809" key="DiffContextDialog" timestamp="1620660774730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="486" y="113" width="1031" height="809" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620660774730" />
-    <state x="748" y="271" key="FileChooserDialogImpl" timestamp="1620815811210">
+    <state x="748" y="271" key="FileChooserDialogImpl" timestamp="1620936031589">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="748" y="271" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620815811210" />
+    <state x="748" y="271" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620936031589" />
     <state x="523" y="172" key="SettingsEditor" timestamp="1620811514503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="523" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620811514503" />
-    <state x="985" y="281" key="Vcs.Push.Dialog.v2" timestamp="1620815698484">
+    <state x="985" y="281" key="Vcs.Push.Dialog.v2" timestamp="1620923808107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="985" y="281" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620815698484" />
+    <state x="985" y="281" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620923808107" />
     <state x="664" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1620659098444">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
