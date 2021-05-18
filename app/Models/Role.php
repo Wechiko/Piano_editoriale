@@ -10,20 +10,36 @@ class Role extends Model
 {
     use HasFactory;
 
-    const ROLE_EDITORIAL_DESIGN_MANAGER = 'editorial design manager';
-    const ROLE_CEO = 'ceo';
-    const ROLE_EDITORIAL_DIRECTOR = 'editorial director';
-    const ROLE_EDITORIAL_RESPONSIBLE = 'editorial responsible';
-    const ROLE_SALES_DIRECTOR = 'sales director';
-    const ROLE_ADMIN = 'admin';
+    /************************************************************************************
+     * CONSTANTS
+     */
 
+    CONST ROLE_EDITORIAL_DESIGN_MANAGER = 'editorial-design-managers';
+    CONST ROLE_EDITORIAL_RESPONSIBLE = 'editorial-responsible';
+    CONST ROLE_EDITORIAL_DIRECTOR = 'editorial-director';
+    CONST ROLE_SALES_DIRECTOR = 'sales-director';
+    CONST ROLE_CEO = 'ceo';
+    CONST ROLE_ADMIN = 'admin';
 
+    /**
+     * The table associated with the model
+     *
+     * @var string
+     */
     protected $table = 'roles';
 
+    /************************************************************************************
+     * RELATIONS
+     */
+
+    /**
+     * Get related users
+     *
+     * @return BelongsToMany
+     */
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'user_role');
+        return $this->belongsToMany(User::class,'user_role');
     }
-
 
 }

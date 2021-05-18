@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\UsersController;
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\EditorialProjectController;
+use App\Http\Controllers\API\UsersController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +15,21 @@ use App\Http\Controllers\API\AuthController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::group([
-    'prefix' => 'v1'], function () {
 
+Route::group([
+    'prefix' => 'v1'
+], function () {
+
+    // Login route
     Route::post('login', [AuthController::class, 'login']);
 
     Route::group([
-        'middleware' => ['auth:sanctum']], function () {
+        'middleware' => ['auth:sanctum']
+    ], function () {
+        // Resources routes
         Route::apiResources([
             'users' => UsersController::class,
+            'editorial-projects' => EditorialProjectController::class,
         ]);
     });
 });
