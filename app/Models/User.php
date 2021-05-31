@@ -44,9 +44,76 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /************************************************************************************
+     * RELATIONS
+     */
 
+    /**
+     * Retrieve roles
+     *
+     * @return BelongsToMany
+     */
     public function roles(): BelongsToMany
     {
         return $this->belongsToMany(Role::class, 'user_role');
     }
+
+    /************************************************************************************
+     * FUNCTIONS
+     */
+
+    /**
+     * Get user role
+     */
+    public function role()
+    {
+        return $this->roles()->first()->only(['name', 'key', 'id']);
+    }
+
+    /**
+     * Get user role
+     */
+    public function roleKey()
+    {
+        return $this->roles()->first()->only(['key'])['key'];
+    }
+
+    /**
+     * Check if has role
+     *
+     * @param $role_key
+     * @return bool
+     */
+    public function hasRole($role_key): bool
+    {
+        $role = $this->roles()->first()->only(['key']);
+
+        if ($role) {
+            return $role["key"] == $role_key;
+        } else {
+            return false;
+        }
+    }
+
+
+    /**
+     * Check if is admin
+     *
+     * @return bool
+     */
+    public function isAdmin(): bool
+    {
+        return $this->hasRole(Role::ROLE_ADMIN);
+    }
+
+    /**
+     * Check if is ceo
+     *
+     * @return bool
+     */
+    public function isCeo(): bool
+    {
+        return $this->hasRole(Role::ROLE_CEO);
+    }
+
 }

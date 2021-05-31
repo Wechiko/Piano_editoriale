@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\EditorialProjectLog;
+use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRoles extends Migration
+class CreateBasicTables extends Migration
 {
     /**
      * Run the migrations.
@@ -26,18 +28,17 @@ class CreateRoles extends Migration
             $table->unsignedBigInteger('role_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('role_id')->references('id')->on('roles');
+        });
+
+        Schema::create('sectors',function (Blueprint $table){
+            $table->tinyIncrements('id');
+            $table->string('name');
+            $table->string('key')->unique();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
 
-        Schema::create('sectors', function (Blueprint $table) {
-            $table->tinyIncrements('id');
-            $table->string('name');
-            $table->string('description')->nullable();
-            $table->string('key')->unique();
-        });
-
-
-        Schema::create('editorial_project', function (Blueprint $table) {
+        Schema::create('editorial_projects',function (Blueprint $table){
             $table->id();
             $table->unsignedTinyInteger('sector_id');
             $table->unsignedBigInteger('author_id');
@@ -54,24 +55,18 @@ class CreateRoles extends Migration
             $table->foreign('sector_id')->references('id')->on('sectors');
             $table->timestamps();
             $table->softDeletes();
-
-
-
         });
-        Schema::create('editorial_project_logs', function (Blueprint $table) {
+
+        Schema::create('editorial_project_logs',function (Blueprint $table){
             $table->id();
-            $table->unsignedBigInteger('editorial_project_id');
+            $table->unsignedBigInteger('editorial_project_id'); // Unsigned = non può essere negativo
             $table->unsignedBigInteger('user_id');
-            $table->enum('action',['CREATE','UPDATE','DESTROY']);
-            $table->dateTimeTz('created_at')->default(\Carbon\Carbon::now());
-            $table->foreign('editorial_project_id')->references('author_id')->on('editorial_project')->onDelete('cascade');
+            $table->enum('action',[EditorialProjectLog::ACTION_CREATE,EditorialProjectLog::ACTION_UPDATE,EditorialProjectLog::ACTION_DESTROY]); // Enum = enumeratore -> può avere solo tot valori prestabiliti
+            //$table->dateTimeTz('created_at')->default(Carbon::now()); // dateTimeTz giorno + orario + timezone
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
+            $table->foreign('editorial_project_id')->references('id')->on('editorial_projects')->onDelete('cascade');
+            $table->timestamps();
         });
-
-
-
-
     }
 
     /**
@@ -82,7 +77,7 @@ class CreateRoles extends Migration
     public function down()
     {
         Schema::dropIfExists('editorial_project_logs');
-        Schema::dropIfExists('editorial_project');
+        Schema::dropIfExists('editorial_projects');
         Schema::dropIfExists('sectors');
         Schema::dropIfExists('user_role');
         Schema::dropIfExists('roles');

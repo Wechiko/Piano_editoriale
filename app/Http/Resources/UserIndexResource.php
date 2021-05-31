@@ -21,6 +21,7 @@ class UserIndexResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
+            'password' => $this->password,
             // If utente è admin allora ritorna anche il ruolo
         ];
     }

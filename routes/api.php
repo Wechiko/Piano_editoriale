@@ -26,6 +26,9 @@ Route::group([
     Route::group([
         'middleware' => ['auth:sanctum']
     ], function () {
+
+        Route::post('editorial-projects/{id}/upload-file', [EditorialProjectController::class, 'uploadFile']);
+
         // Resources routes
         Route::apiResources([
             'users' => UsersController::class,

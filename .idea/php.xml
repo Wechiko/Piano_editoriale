@@ -108,19 +108,11 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
-      <path value="$PROJECT_DIR$/vendor/app/Models" />
-      <path value="$PROJECT_DIR$/vendor/app/Http" />
-      <path value="$PROJECT_DIR$/vendor/app/Exceptions" />
-      <path value="$PROJECT_DIR$/vendor/app/Console" />
-      <path value="$PROJECT_DIR$/vendor/app/Providers" />
-      <path value="$PROJECT_DIR$/vendor/.idea/commandlinetools" />
-      <path value="$PROJECT_DIR$/vendor/.idea/sonarlint" />
-      <path value="$PROJECT_DIR$/vendor/database/migrations" />
-      <path value="$PROJECT_DIR$/vendor/database/seeders" />
-      <path value="$PROJECT_DIR$/vendor/database/factories" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
